@@ -1,0 +1,1481 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: monospace;
+}
+
+/* This changes the background of the webpage*/
+	#index{
+		width: 100%;
+		height: 100vh;
+	    background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url("../Pictures/mountain.jpg"); 
+	    background-attachment: fixed; 
+	    background-repeat: no-repeat;  
+	    background-size: cover; 
+	    background-position: center; 
+	}
+
+	/* Default color scheme */
+
+	body {
+	  background-color: #d3eaf2;
+	  color: #333;
+	}
+
+
+	/* This creates large headers and creates a padding around them to align it better */
+	header{
+		padding-top: 60px;
+		padding-left: 20px;
+		color: darkcyan;
+		font-size: 60px;
+		text-align: left;
+	}
+
+	/* The navbar section creates the navbar above the webpage */
+	/* This formats the navbar to a grid so that it spans across the top of the webpage*/
+	ul{
+		display: grid;
+	  grid-template-columns: auto auto auto auto;
+	}
+
+	/* This creates the dark border around the navbar */
+	ul li{
+		list-style: none;
+	   	text-align: center;
+	   	background-image: linear-gradient(rgba(0,0,0,0.66),rgba(0,0,0,0.66));
+	   	padding: 10px;
+	}
+
+	/* This creates the dark border around the navbar */
+	li > a{
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+
+	/* This aligns the text to the center of the page and makes the color of the text white */
+	.home {
+		padding-top: 5%;
+		color: white;
+		text-align: center;
+	}
+
+	/* This makes the heading bigger */
+	.home h1 {
+		font-size: 70px;
+		margin: 20px;
+	}
+
+	/* This creates a white section header, and adds a border around it*/
+	.about_me header{
+		padding-left: 50px;
+		padding-top: 1px;
+	  text-align: center;
+	  font-size: 50px;
+	  color: white;
+	}
+
+	/* This creates a flex box to align my content and picture around it */
+	.about_me_flexbox{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 2px white solid;
+		border-radius: 5px;
+		margin: 5px;
+	}
+
+	/* This makes the text in the section white, and creates a padding around it to align it, and gives 80% of the area to the text*/
+	.about_me_flexbox article{
+		align-self: flex-start;
+		flex: 0 1 80%;
+		color: white;
+		font-size: 25px;
+		padding-top: 60px;
+		padding-left: 50px;
+	}
+
+	/* This gives 20% of the area to my picture and adds padding, to align the picture better*/
+	.about_me_flexbox aside{
+		flex: 0 1 20%;
+		padding-bottom: 20px;
+	}
+
+	/* This creates a border around the image, and the padding and margin help make the border neater*/
+	.about_me_flexbox img{
+		border: 2px solid darkcyan;
+		margin: 10px;
+		padding: 10px;
+		border-radius: 8px;
+	}
+
+	/* This creates a white section header, and adds a border around it*/
+	.fun_section header{
+		padding-left: 50px;
+		padding-top: 1px;
+	  text-align: center;
+	  font-size: 50px;
+	  color: white;
+	}
+
+
+	/* This creates a flexbox for the fun_section content*/
+	.fun_section{
+		display: flex;
+		align-items: center;
+		border: 2px white solid;
+		border-radius: 5px;
+		margin: 5px;
+		padding: 50px;
+	}
+
+	/* This makes all the text in this section white, 25px big and adds padding to align it*/
+	.fun_section p{
+		align-self: flex-start;
+		flex: 0 1 80%;
+		color: white;
+		text-align: center;
+		font-size: 25px;
+		padding-top: 15px;
+	}
+
+	/* This creates a white section header, and adds a border around it*/
+	.contact header{
+		padding-left: 50px;
+		padding-top: 1px;
+	  text-align: center;
+	  font-size: 50px;
+	  color: white;
+	}
+
+
+	/* This creates a flexbox for the fun_section content*/
+	.contact{
+		display: flex;
+		align-items: center;
+		border: 2px white solid;
+		border-radius: 5px;
+		margin: 5px;
+		padding: 50px;
+	}
+
+	/* This makes all the text in this section white, 25px big and adds padding to align it*/
+	.contact p{
+		align-self: flex-start;
+		flex: 0 1 52%;
+		color: white;
+		text-align: center;
+		font-size: 25px;
+		padding-top: 15px;
+	}
+
+	/* The following code makes all links white, and makes makes it so that the cursor changes to a pointer above it*/
+	a {
+	  text-decoration: none;
+	  position: relative;
+	  color: white;
+	  cursor: pointer;
+	}
+
+	/* This creates a small underline over the links, when the user places their cursor over them */
+	a::after {
+	  content: '';
+	  display: block;
+	  height: 2px;
+	  width: 0;
+	  background-color: darkcyan;
+	  position: absolute;
+	  bottom: -2px;
+	  left: 0;
+	  transition: 0.3s;
+	}
+
+	a:hover::after {
+	  width: 100%;
+	}
+
+	/* This creates black background at the bottom of the page to include footer information */
+	footer{
+		display: grid;
+		grid-template-rows: auto;
+		background-color: black;
+		padding: 30px;
+	}
+
+	/* This makes all the text in the footer white, 10px and aligns it to the center */ 
+	footer p{
+		color: white;
+		font-size: 10px;
+		text-align: center;
+	}
+
+	/* flex box to contain the entire webpage */
+	.main{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+
+	/* Creates a flex box to incoperate the introduction section of the webpage */
+	.introduction-container{ 
+		display: flex;
+		text-align: center;
+		border: 1px solid black;
+		margin: 10px;
+		padding-top: 30px;
+	}
+
+	/* This creates large headers and creates a padding around them to align it better */
+	.introduction-container header{
+		flex: 0 1 30%;
+		font-size: 60px;
+		color: darkcyan;
+		padding-top: 60px;
+	}
+
+	/* this makes all the text in this section of the flexbox black, 25px and adds padding to align everything properly*/
+	.introduction-container p{
+		flex: 0 1 70%;
+		font-size: 25px;
+		color: black;
+		text-align: left;
+		padding-left: 50px;
+		padding-bottom: 30px;
+	}
+
+	/* Creates a flex box to incoperate the profile section of the webpage */
+	.profile-container {
+		display: flex;
+		text-align: center;
+		border: 1px solid black;
+		margin: 10px;
+		padding: 30px;
+	}
+
+	/* This creates large headers and creates a padding around them to align it better */
+	.profile-container header{
+		flex: 0 1 30%;
+		font-size: 60px;
+		color: darkcyan;
+		padding-top: 80px;
+		padding-left: 10px;
+	}
+
+	/* creates a small spacing in between the top and table */
+	.profile-container span{
+		flex: 0 1 5%;
+	}
+
+	/* makes the text black, 25px in the table and aligns it to the left*/
+	.profile-container table{
+		flex: 0 1 65%;
+		font-size: 25px;
+		color: black;
+		text-align: left;
+	}
+
+	/* this uses multiple selector to create a border around the table */
+	.profile-container table, th, td {
+	 	border: 1px solid;
+	 	text-align: center;
+	}
+
+	/* changes the background of a row when the user howers over it*/
+	.profile-container tr:hover {
+		background-color: rgba(0,0,0,0.2);
+	}
+
+	/* Creates a flex box to incoperate the projects section of the webpage */
+	.project-container{ 
+		display: flex;
+		text-align: center;
+		border: 1px solid black;
+		margin: 10px;
+		padding: 50px;
+	}
+
+	/* This creates large headers and creates a padding around them to align it better */
+	.project-container header{
+		flex: 0 1 30%;
+		font-size: 60px;
+		color: darkcyan;
+		padding-top: 25px;
+	}
+
+	/* This makes the list and changes the font size of text in it 25px and changes the bullet points to squares */
+	.project-container ul{
+		flex: 0 1 70%;
+		font-size: 25px;
+		color: black;
+		text-align: left;
+		padding-left: 50px;
+		list-style: square inside;
+	}
+
+	/* This creates a darker transparent background along the list elements and aligns the text in it to left */
+	.project-container ul li{
+		background: rgba(0,0,0,0.1);
+		font-size: 25px;
+		color: black;
+		margin: 5px;
+		font-size: 20;
+		text-align: left;
+		padding: 2px;
+	}
+
+	/* this creates a margin around the section*/
+	.f1{
+		margin: 10px;
+		border: 1px solid black;
+		border-radius: 8px;
+	}
+
+	/* creates a flex box to align all the content in this section */
+	.formula1{
+		display: flex;
+		justify-content: space-between;
+	  	align-items: center;
+	  	margin: 10px;
+	}
+
+	/* justifies the text in this section and changes the font size to 20px */
+	.left {
+		padding: 20px;
+		font-size: 20px;
+		text-align: justify;
+		width: 70%;
+	}
+
+	/* This creates a border to distingusih the picture from the text and creates a padding around it*/
+	.right {
+		border: 1px solid black;
+		padding: 10px;
+		align-items: center;
+		width: 30%;
+		border-radius: 8px;
+	}
+
+	/* makes it so that the numbers in the order list align properly with the tier list */
+	.formula1 ol{
+		list-style-position: inside;
+	}
+
+	/* adds a border, margin and padding around the image and makes it so that text floats at the left of the image */
+	.right img{
+		border-radius: 4px;
+		margin: 5px;
+		padding: 10px;
+		border: 1px solid black;
+		float: left;
+	}
+
+	/* Makes the car image and adds a border around it */
+	.car {
+		padding-top: 20px;
+	}
+	.car img{
+		border-radius: 4px;
+		margin: 5px;
+		padding: 20px;
+		border: 1px solid black;
+		float: bottom;
+	}
+
+	/* formats and aligns the caption around the image*/
+	.caption{
+		font-size: 20px;
+		text-align: center;
+		padding-top: 50px;
+	}
+
+	/*this creates an image gallery in the fun html*/
+	.f1 .gallery {
+	  margin: 5px;
+	  float: left;
+	  width: auto;
+	}
+
+	.f1 .gallery:hover {
+	  border: 1px solid #777;
+	  border-radius: 8px;
+	}
+
+	.f1 .gallery img {
+	  width: 100%;
+	  height: auto;
+	  align-items: center;
+	}
+
+	.desc {
+	  padding: 20px;
+	  text-align: center;
+	}
+
+	.mySlides {display:none;}
+
+	/* creates a border around this section*/
+	.Basketball{
+		border: 1px solid black;
+		margin: 10px;
+		border-radius: 8px;
+	}
+
+	/* makes the text in this section 17px */
+	.Basketball p{
+		padding: 10px;
+		font-size: 17px;
+	}
+
+
+	/* creates a border around this section */
+	.Surprise{
+		border: 1px solid black;
+		margin: 10px;
+		padding: 10px;
+		border-radius: 8px;
+	}
+
+	/* This creates a margin around the mail link and assigns a grid area to mail*/
+	.mail{
+		padding: 30px;
+		margin-left: 200px;
+		grid-area: mail;
+	}
+
+	/* this makes the mail link black, and makes it's position relative, and the cursor changes to a pointer when you hover above it */
+	.mail a{
+		text-decoration: none;
+		position: relative;
+		color: black;
+		cursor: pointer;
+	}
+
+	/* this creates a white background around the link and the text to create a seperation from the webpage background */
+	.mail a, .mail p{
+	  display: inline-block;
+	  padding: 10px 20px;
+	  border-radius: 5px;
+	  background-color: white;
+	  color: black;
+	  transition: background-color 0.5s ease-out;
+	}
+
+	/* This inverts the color of the link when you hover above it*/
+	.mail a:hover {
+	  background-color: black;
+	  color: white;
+	}
+
+	/* This creates a margin around the instagram link and assigns a grid area to instagram*/
+	.instagram{
+		padding: 30px;
+		margin-left: 200px;
+		grid-area: instagram;
+	}
+
+	/* this makes the instagram link black, and makes it's position relative, and the cursor changes to a pointer when you hover above it */
+	.instagram a{
+		text-decoration: none;
+		position: relative;
+		color: black;
+		cursor: pointer;
+	}
+
+	/* this creates a white background around the link and the text to create a seperation from the webpage background */
+	.instagram a, .instagram p {
+	  display: inline-block;
+	  padding: 10px 20px;
+	  border-radius: 5px;
+	  background-color: white;
+	  color: black;
+	  transition: background-color 0.5s ease-out;
+	}
+
+	/* This inverts the color of the link when you hover above it*/
+	.instagram a:hover {
+	  background-color: black;
+	  color: white;
+	} 
+
+	/* This creates a margin around the linkedin link and assigns a grid area to linkedin*/
+	.linkedin{
+		padding: 30px;
+		margin-left: 200px;
+		grid-area: linkedin;
+	}
+
+	/* this makes the linkedin link black, and makes it's position relative, and the cursor changes to a pointer when you hover above it */
+	.linkedin a{
+		text-decoration: none;
+		position: relative;
+		color: black;
+		cursor: pointer;
+	}
+
+	/* this creates a white background around the link and the text to create a seperation from the webpage background */
+	.linkedin a, .linkedin p{
+
+	  display: inline-block;
+	  padding: 10px 20px;
+	  border-radius: 5px;
+	  background-color: white;
+	  color: black;
+	  transition: background-color 0.5s ease-out;
+	}
+
+	/* This inverts the color of the link when you hover above it*/
+	.linkedin a:hover {
+	  background-color: black;
+	  color: white;
+	} 
+
+	/* this aligns all the links using a gridbox, and previously assigned grid areas */
+	.socials {
+	  display: grid;
+	  grid-template-columns: auto auto;
+	  grid-template-rows: auto auto auto;
+	  grid-template-areas: "mail message" "instagram message" "linkedin message" ;
+	  padding: 20px;
+	}
+
+	/* this makes all the div's in the section in a row*/
+	.socials div {
+	  display: inline-block;
+	  margin-right: 10px;
+	}
+
+	/* This creates a border around the message box*/
+	.message {
+		border: 2px solid black;
+		border-radius: 8px;
+		display: inline-block;
+		width: 800px;
+		margin-left: 10px;
+		grid-area: message;
+		padding: 20px;
+	}
+
+	/* this uses the attribute selector to change the text in the label tag */
+	label[for]{
+		font-size: 20px;
+		padding-left: 300px;
+		padding-top: 10px;
+	}
+
+	/* this styles the button to align the button and make it black with white text and also creates a border around it*/
+	.message button{
+		text-align: center;
+		height: 50px;
+		width: 	200px;
+		color: white;
+		background-color: black;
+		border-radius: 	8px;
+		cursor: pointer;
+		float: inherit;
+	}
+
+	button{
+		text-align: center;
+		height: 40px;
+		width: 100px;
+		color: black;
+		background-color: white;
+		border-radius: 8px;
+		cursor: pointer;
+		float: right;
+		margin: 10px;
+	}
+
+	.highlight {
+	   border: 1px dashed gray;
+	   cursor: pointer;
+	}
+	.hide {
+	   color: transparent;
+	}
+
+	textarea {
+	  width: 100%;
+	  height: 100%; /* default height */
+	}
+
+
+/* This media query takes into account mobile phones with smaller screen sizes, 
+ * I made the min-width: 325px as I was facing issues with the RWD at a size lower than that 
+ */
+@media (max-width: 600px) and (min-width: 325px){
+  h1 {
+    font-size: 20px;
+  }
+
+  h3 {
+  	font-size: 20px;
+  }
+
+  /* The navbar section creates the navbar above the webpage */
+	/* This formats the navbar to a grid so that it spans across the top of the webpage*/
+	ul{
+		display: grid;
+	  grid-template-columns: auto auto auto auto;
+	}
+
+	/* This creates the dark border around the navbar */
+	ul li{
+		list-style: none;
+	   	text-align: center;
+	   	background-image: linear-gradient(rgba(0,0,0,0.66),rgba(0,0,0,0.66));
+	   	padding: 15px;
+	}
+
+	/* This creates the dark border around the navbar */
+	li > a{
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+
+	/* This creates a white section header, and adds a border around it*/
+	.about_me header{
+		padding-top: 10px;
+		padding-right: 35px;
+	  text-align: center;
+	  font-size: 40px;
+	  color: white;
+	}
+
+	/* This creates a flex box to align my content and picture around it */
+	.about_me_flexbox{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border: 2px white solid;
+		border-radius: 5px;
+	}
+
+	/* This creates a white section header, and adds a border around it*/
+	.fun_section header{
+		padding-left: 0px;
+		padding-top: 1px;
+	  text-align: center;
+	  font-size: 40px;
+	  color: white;
+	}
+
+
+	/* This creates a flexbox for the fun_section content*/
+	.fun_section{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 2px white solid;
+		border-radius: 5px;
+		margin: 5px;
+		padding: 50px;
+	}
+
+	/* This creates a white section header, and adds a border around it*/
+	.contact header{
+		padding-left: 0px;
+		padding-top: 1px;
+	  text-align: center;
+	  font-size: 40px;
+	  color: white;
+	}
+
+
+	/* This creates a flexbox for the fun_section content*/
+	.contact{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 2px white solid;
+		border-radius: 5px;
+		margin: 5px;
+		padding: 50px;
+	}
+
+	/* flex box to contain the entire webpage */
+	.main{
+		display: flex;
+		flex-direction: row;
+
+	}
+
+	.introduction-container{ 
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		border: 1px solid black;
+		margin: 50px 10px 10px 10px;
+		padding: 10px;
+	}
+
+		/* This creates large headers and creates a padding around them to align it better */
+	.introduction-container header{
+		font-size: 40px;
+		color: darkcyan;
+		padding-top: 5px;
+		text-align: center;
+	}
+
+	/* this makes all the text in this section of the flexbox black, 25px and adds padding to align everything properly*/
+	.introduction-container p{
+		font-size: 20px;
+		color: black;
+		text-align: left;
+		padding-left: 28px;
+	}
+
+	/* Creates a flex box to incoperate the profile section of the webpage */
+	.profile-container {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		border: 1px solid black;
+		margin: 10px;
+		padding: 26px;
+		width: 599px;
+	}
+
+	/* This creates large headers and creates a padding around them to align it better */
+	.profile-container header{
+		font-size: 40px;
+		color: darkcyan;
+		padding-top: 10px;
+		padding-left: 0px;
+		text-align: center;
+	}
+
+	/* creates a small spacing in between the top and table */
+	.profile-container span{
+		flex: 0 1 5%;
+	}
+
+	/* makes the text black, 25px in the table and aligns it to the left*/
+	.profile-container table{
+		font-size: 20px;
+		color: black;
+		text-align: left;
+	}
+
+
+	/* this uses multiple selector to create a border around the table */
+	.profile-container table, th, td {
+	 	border: 1px solid;
+	 	text-align: center;
+	}
+
+	/* Creates a flex box to incoperate the projects section of the webpage */
+	.project-container{ 
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		border: 1px solid black;
+		margin: 10px;
+		padding-top: 0px;
+	}
+
+	/* This creates large headers and creates a padding around them to align it better */
+	.project-container header{
+		font-size: 40px;
+		padding-top: 0px;
+		text-align: center;
+	}
+
+	/* This makes the list and changes the font size of text in it 25px and changes the bullet points to squares */
+	.project-container ul{
+		font-size: 10px;
+		color: black;
+		text-align: left;
+		padding-left: 0px;
+		list-style: none;
+	}
+
+
+	/* This creates a darker transparent background along the list elements and aligns the text in it to left */
+	.project-container ul li{
+		display: block;
+		background: rgba(0,0,0,0.1);
+		font-size: 15px;
+		color: black;
+		margin: 5px;
+		text-align: left;
+		padding: 1px;
+	}
+
+	footer {
+	  position: static;
+	  bottom: 0;
+	  width: 100%;
+	  display: grid;
+	  grid-template-rows: auto;
+	  background-color: black;
+	  padding: 30px;
+	}
+
+	footer p {
+	  color: white;
+	  font-size: 10px;
+	  text-align: center;
+	}
+	/* this creates a margin around the section*/
+	.f1{
+		margin: 10px;
+		border: 1px solid black;
+		border-radius: 8px;
+	}
+
+	/* creates a flex box to align all the content in this section */
+	.formula1{
+		display: flex;
+	  flex-direction: column;
+	  justify-content: none;
+	  align-items: flex-start;
+	  margin: 5px;
+	}
+
+	/* justifies the text in this section and changes the font size to 20px */
+	.left {
+		padding: 0px 50px;
+		font-size: 17px;
+		text-align: justify;
+	}
+
+	/* This creates a border to distingusih the picture from the text and creates a padding around it*/
+	.right {
+		display: flex;
+		flex-direction: column;
+  	align-items: center; 
+  	text-align: center; 
+		border: none;
+		padding-right: 1px;
+		align-items: center;
+		border-radius: 8px;
+		padding: 0px 140px;
+	}
+
+	/* makes it so that the numbers in the order list align properly with the tier list */
+	.formula1 ol{
+		list-style-position: inside;
+	}
+
+	/* adds a border, margin and padding around the image and makes it so that text floats at the left of the image */
+	.right img{
+		border-radius: 4px;
+		margin: 15px;
+		padding: 10px;
+		border: 1px solid black;
+		float: inherit;
+	}
+
+	/* Makes the car image and adds a border around it */
+	.car {
+		padding-top: 20px;
+	}
+	.car img{
+		border-radius: 4px;
+		margin: 5px;
+		padding: 10px;
+		border: 1px solid black;
+		float: bottom;
+		width: 300px;
+	}
+
+	/* formats and aligns the caption around the image*/
+	.caption{
+		font-size: 17px;
+		text-align: center;
+		padding-top: 0px;
+	}
+
+	/*this creates an image gallery in the fun html*/
+	.f1 .gallery {
+	  margin: 5px;
+	  float: left;
+	  width: auto;
+	}
+
+	.f1 .gallery:hover {
+	  border: 1px solid #777;
+	  border-radius: 8px;
+	}
+
+	.f1 .gallery img {
+	  width: 100%;
+	  height: auto;
+	  align-items: center;
+	}
+
+	.desc {
+	  padding: 20px;
+	  text-align: center;
+	}
+
+	video {
+		width: 348px;
+	}
+
+	/* This creates a margin around the mail link and assigns a grid area to mail*/
+	.mail{
+		padding: 0px;
+		margin: 10px 75px;
+		grid-area: mail;
+	}
+
+	/* This creates a margin around the instagram link and assigns a grid area to instagram*/
+	.instagram{
+		padding: 0px;
+		margin: 10px 75px;
+		grid-area: instagram;
+	}
+
+	/* this makes the instagram link black, and makes it's position relative, and the cursor changes to a pointer when you hover above it */
+	.instagram a{
+		text-decoration: none;
+		position: relative;
+		color: black;
+		cursor: pointer;
+	}
+
+
+	/* This creates a margin around the linkedin link and assigns a grid area to linkedin*/
+	.linkedin{
+		padding: 0px;
+		margin: 10px 75px;
+		grid-area: linkedin;
+	}
+
+	/* this makes the linkedin link black, and makes it's position relative, and the cursor changes to a pointer when you hover above it */
+	.linkedin a{
+		text-decoration: none;
+		position: relative;
+		color: black;
+		cursor: pointer;
+	}
+
+	/* this aligns all the links using a gridbox, and previously assigned grid areas */
+	.socials {
+	  display: grid;
+	  justify-content: center;
+	  grid-template-columns: auto auto;
+	  grid-template-rows: auto auto auto;
+	  grid-template-areas: "mail" "instagram" "linkedin" "message" ;
+	  padding: 20px;
+	}
+
+	/* this makes all the div's in the section in a row*/
+	.socials div {
+	  display: inline-block;
+	  margin-right: 10px;
+	}
+
+	/* This creates a border around the message box*/
+	.message {
+		border: 2px solid black;
+		border-radius: 8px;
+		display: inline-block;
+		width: 300px;
+		margin-left: 0px;
+		margin-top: 10px;
+		grid-area: message;
+		padding: 20px;
+	}
+
+	/* this uses the attribute selector to change the text in the label tag */
+	label[for]{
+		font-size: 20px;
+		padding-left: 0px;
+		padding-top: 10px;
+	}
+
+	/* this styles the button to align the button and make it black with white text and also creates a border around it*/
+	.message button{
+		text-align: center;
+		height: 50px;
+		width: 	200px;
+		color: white;
+		background-color: black;
+		border-radius: 	8px;
+		cursor: pointer;
+		float: inherit;
+	}
+
+
+	button{
+		text-align: center;
+		height: 40px;
+		width: 100px;
+		color: black;
+		background-color: white;
+		border-radius: 8px;
+		cursor: pointer;
+		float: right;
+		margin: 10px;
+	}
+
+	textarea {
+    height: 200px; /* smaller height */
+    width: 300px; /* smaller width */
+  }
+}
+	
+
+
+@media (min-width: 600px) and (max-width: 1000px) {
+	  h1 {
+    font-size: 20px;
+  }
+
+  h3 {
+  	font-size: 20px;
+  }
+
+  /* The navbar section creates the navbar above the webpage */
+	/* This formats the navbar to a grid so that it spans across the top of the webpage*/
+	ul{
+		display: grid;
+	  grid-template-columns: auto auto auto auto;
+	}
+
+	/* This creates the dark border around the navbar */
+	ul li{
+		list-style: none;
+	   	text-align: center;
+	   	background-image: linear-gradient(rgba(0,0,0,0.66),rgba(0,0,0,0.66));
+	   	padding: 15px;
+	}
+
+	/* This creates the dark border around the navbar */
+	li > a{
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+
+	/* This creates a white section header, and adds a border around it*/
+	.about_me header{
+		padding-top: 10px;
+		padding-right: 35px;
+	  text-align: center;
+	  font-size: 40px;
+	  color: white;
+	}
+
+	/* This creates a flex box to align my content and picture around it */
+	.about_me_flexbox{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		border: 2px white solid;
+		border-radius: 5px;
+	}
+
+	/* This creates a white section header, and adds a border around it*/
+	.fun_section header{
+		padding-left: 0px;
+		padding-top: 1px;
+	  text-align: center;
+	  font-size: 40px;
+	  color: white;
+	}
+
+
+	/* This creates a flexbox for the fun_section content*/
+	.fun_section{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 2px white solid;
+		border-radius: 5px;
+		margin: 5px;
+		padding: 50px;
+	}
+
+	/* This creates a white section header, and adds a border around it*/
+	.contact header{
+		padding-left: 0px;
+		padding-top: 1px;
+	  text-align: center;
+	  font-size: 40px;
+	  color: white;
+	}
+
+
+	/* This creates a flexbox for the fun_section content*/
+	.contact{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 2px white solid;
+		border-radius: 5px;
+		margin: 5px;
+		padding: 50px;
+	}
+
+	/* flex box to contain the entire webpage */
+	.main{
+		display: flex;
+		flex-direction: row;
+
+	}
+
+	.introduction-container{ 
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		border: 1px solid black;
+		margin: 50px 10px 10px 10px;
+		padding: 10px;
+	}
+
+		/* This creates large headers and creates a padding around them to align it better */
+	.introduction-container header{
+		font-size: 40px;
+		color: darkcyan;
+		padding-top: 5px;
+		text-align: center;
+	}
+
+	/* this makes all the text in this section of the flexbox black, 25px and adds padding to align everything properly*/
+	.introduction-container p{
+		font-size: 20px;
+		color: black;
+		text-align: left;
+		padding-left: 28px;
+	}
+
+	/* Creates a flex box to incoperate the profile section of the webpage */
+	.profile-container {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		border: 1px solid black;
+		margin: 10px;
+		width: 999px;
+		padding: 26px;
+
+	}
+
+	/* This creates large headers and creates a padding around them to align it better */
+	.profile-container header{
+		font-size: 40px;
+		color: darkcyan;
+		padding-top: 10px;
+		padding-left: 0px;
+		text-align: center;
+	}
+
+	/* creates a small spacing in between the top and table */
+	.profile-container span{
+		flex: 0 1 5%;
+	}
+
+	/* makes the text black, 25px in the table and aligns it to the left*/
+	.profile-container table{
+		font-size: 20px;
+		color: black;
+		text-align: left;
+	}
+
+
+	/* this uses multiple selector to create a border around the table */
+	.profile-container table, th, td {
+	 	border: 1px solid;
+	 	text-align: center;
+	}
+
+	/* Creates a flex box to incoperate the projects section of the webpage */
+	.project-container{ 
+		display: flex;
+		flex-direction: row;
+		justify-content: ;
+		align-items: flex-start;
+		border: 1px solid black;
+		margin: 10px;
+		padding-top: 0px;
+	}
+
+	/* This creates large headers and creates a padding around them to align it better */
+	.project-container header{
+		font-size: 40px;
+		padding-top: 0px;
+		text-align: center;
+	}
+
+	/* This makes the list and changes the font size of text in it 25px and changes the bullet points to squares */
+	.project-container ul{
+		font-size: 10px;
+		color: black;
+		text-align: left;
+		padding-left: 0px;
+		list-style: none;
+	}
+
+
+	/* This creates a darker transparent background along the list elements and aligns the text in it to left */
+	.project-container ul li{
+		display: block;
+		background: rgba(0,0,0,0.1);
+		font-size: 15px;
+		color: black;
+		margin: 5px;
+		text-align: left;
+		padding: 1px;
+	}
+
+	footer {
+	  position: static;
+	  bottom: 0;
+	  width: 100%;
+	  display: grid;
+	  grid-template-rows: auto;
+	  background-color: black;
+	  padding: 30px;
+	}
+
+	footer p {
+	  color: white;
+	  font-size: 10px;
+	  text-align: center;
+	}
+	/* this creates a margin around the section*/
+	.f1{
+		margin: 10px;
+		border: 1px solid black;
+		border-radius: 8px;
+	}
+
+	/* creates a flex box to align all the content in this section */
+	.formula1{
+		display: flex;
+		flex-direction: row;
+		justify-content: none;
+		align-items: flex-start;
+	  margin: 5px;
+	}
+
+	/* justifies the text in this section and changes the font size to 20px */
+	.left {
+		padding: 0px;
+		font-size: 17px;
+		text-align: justify;
+	}
+
+	/* This creates a border to distingusih the picture from the text and creates a padding around it*/
+	.right {
+		display: flex;
+		flex-direction: column;
+  	align-items: center; 
+  	text-align: center; 
+		border: none;
+		padding-right: 0px;
+		align-items: center;
+		border-radius: 8px;
+	}
+
+	/* makes it so that the numbers in the order list align properly with the tier list */
+	.formula1 ol{
+		list-style-position: inside;
+	}
+
+	/* adds a border, margin and padding around the image and makes it so that text floats at the left of the image */
+	.right img{
+		border-radius: 4px;
+		margin: 15px;
+		padding: 10px;
+		border: 1px solid black;
+		float: inherit;
+	}
+
+	/* Makes the car image and adds a border around it */
+	.car {
+		padding-top: 20px;
+	}
+
+	.car img{
+		border-radius: 4px;
+		margin: 5px;
+		padding: 10px;
+		border: 1px solid black;
+		float: bottom;
+		width: 300px;
+	}
+
+	/* formats and aligns the caption around the image*/
+	.caption{
+		font-size: 14px;
+		padding-top: 0px;
+		padding-left: 0px;
+	}
+
+	/*this creates an image gallery in the fun html*/
+	.f1 .gallery {
+	  margin: 5px;
+	  float: left;
+	  width: auto;
+	}
+
+	.f1 .gallery:hover {
+	  border: 1px solid #777;
+	  border-radius: 8px;
+	}
+
+	.f1 .gallery img {
+	  width: 100%;
+	  height: auto;
+	  align-items: center;
+	}
+
+	.desc {
+	  padding: 20px;
+	  text-align: center;
+	}
+
+	video {
+		width: 348px;
+	}
+
+	/* This creates a margin around the mail link and assigns a grid area to mail*/
+	.mail{
+		padding: 0px;
+		margin: 10px 75px;
+		grid-area: mail;
+	}
+
+	/* This creates a margin around the instagram link and assigns a grid area to instagram*/
+	.instagram{
+		padding: 0px;
+		margin: 10px 75px;
+		grid-area: instagram;
+	}
+
+	/* this makes the instagram link black, and makes it's position relative, and the cursor changes to a pointer when you hover above it */
+	.instagram a{
+		text-decoration: none;
+		position: relative;
+		color: black;
+		cursor: pointer;
+	}
+
+
+	/* This creates a margin around the linkedin link and assigns a grid area to linkedin*/
+	.linkedin{
+		padding: 0px;
+		margin: 10px 75px;
+		grid-area: linkedin;
+	}
+
+	/* this makes the linkedin link black, and makes it's position relative, and the cursor changes to a pointer when you hover above it */
+	.linkedin a{
+		text-decoration: none;
+		position: relative;
+		color: black;
+		cursor: pointer;
+	}
+
+	/* this aligns all the links using a gridbox, and previously assigned grid areas */
+	.socials {
+	  display: grid;
+	  justify-content: center;
+	  grid-template-columns: auto auto;
+	  grid-template-rows: auto auto auto;
+	  grid-template-areas: "mail" "instagram" "linkedin" "message" ;
+	  padding: 20px;
+	}
+
+	/* this makes all the div's in the section in a row*/
+	.socials div {
+	  display: inline-block;
+	  margin-right: 10px;
+	}
+
+	/* This creates a border around the message box*/
+	.message {
+		border: 2px solid black;
+		border-radius: 8px;
+		display: inline-block;
+		width: 300px;
+		margin-left: 0px;
+		margin-top: 10px;
+		grid-area: message;
+		padding: 20px;
+	}
+
+	/* this uses the attribute selector to change the text in the label tag */
+	label[for]{
+		font-size: 20px;
+		padding-left: 0px;
+		padding-top: 10px;
+	}
+
+	/* this styles the button to align the button and make it black with white text and also creates a border around it*/
+	.message button{
+		text-align: center;
+		height: 50px;
+		width: 	200px;
+		color: white;
+		background-color: black;
+		border-radius: 	8px;
+		cursor: pointer;
+		float: inherit;
+	}
+
+
+	button{
+		text-align: center;
+		height: 40px;
+		width: 100px;
+		color: black;
+		background-color: white;
+		border-radius: 8px;
+		cursor: pointer;
+		float: right;
+		margin: 10px;
+	}
+
+	textarea {
+    height: 200px; /* smaller height */
+    width: 300px; /* smaller width */
+  }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1440px){
+	/* This creates a border around the message box*/
+	.message {
+		width: 500px;
+		text-align: center;
+	}
+
+	label[for]{
+		font-size: 20px;
+		padding-left: 0px;
+		padding-top: 10px;
+	}
+
+	/* This creates a margin around the mail link and assigns a grid area to mail*/
+	.mail{
+		padding: 0px;
+		margin: 10px 50px;
+		grid-area: mail;
+	}
+
+	/* This creates a margin around the instagram link and assigns a grid area to instagram*/
+	.instagram{
+		padding: 0px;
+		margin: 10px 50px;
+		grid-area: instagram;
+	}
+
+
+	/* This creates a margin around the linkedin link and assigns a grid area to linkedin*/
+	.linkedin{
+		padding: 0px;
+		margin: 10px 50px;
+		grid-area: linkedin;
+	}
+}
+
+
+
